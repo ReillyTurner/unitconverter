@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Conversion Test Page</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #e9e9e9;
+      }
+      .code-block {
+        background-color: #2d2d2d;
+        color: #ccc;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        white-space: pre;
+        margin-bottom: 15px;
+      }
+   
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Unit Conversion Test Page</h1>
+      <p>
+        This page contains various units of measurement to test your Chrome
+        extension. Current date: 5/28/2025
+      </p>
+
+      <h2>Length Units</h2>
+      <p>
+        The road is <span class="highlight">10km</span> long. Another section is
+        <span class="highlight">5 miles</span>.
+      </p>
+      <p>
+        I need <span class="highlight">2.5 m</span> of fabric, but they only
+        have <span class="highlight">250cm</span> or
+        <span class="highlight">2500 mm</span>.
+      </p>
+      <p>
+        He is <span class="highlight">6 ft</span> tall, which is about
+        <span class="highlight">182.88 centimeters</span>.
+      </p>
+      <p>
+        Can you measure <span class="highlight">3inches</span>? Or perhaps
+        <span class="highlight">3 inch</span>?
+      </p>
+      <p>
+        A marathon is <span class="highlight">42.195kilometers</span> or
+        <span class="highlight">26.2miles</span>.
+      </p>
+      <p>
+        This ruler is <span class="highlight">30 cm</span> long. That's
+        <span class="highlight">0.3meters</span>.
+      </p>
+      <p>
+        The distance is <span class="highlight">1000 yd</span>. A small step is
+        <span class="highlight">1foot</span>.
+      </p>
+      <p>
+        No space: <span class="highlight">50km</span>,
+        <span class="highlight">10m</span>, <span class="highlight">5cm</span>,
+        <span class="highlight">2mm</span>, <span class="highlight">1mi</span>,
+        <span class="highlight">3yd</span>, <span class="highlight">6ft</span>,
+        <span class="highlight">12in</span>.
+      </p>
+      <p>
+        With space: <span class="highlight">50 km</span>,
+        <span class="highlight">10 m</span>,
+        <span class="highlight">5 cm</span>,
+        <span class="highlight">2 mm</span>,
+        <span class="highlight">1 mi</span>,
+        <span class="highlight">3 yd</span>,
+        <span class="highlight">6 ft</span>,
+        <span class="highlight">12 in</span>.
+      </p>
+      <p>
+        Full names: <span class="highlight">50 kilometers</span>,
+        <span class="highlight">10 meters</span>,
+        <span class="highlight">5 centimeters</span>,
+        <span class="highlight">2 millimeters</span>,
+        <span class="highlight">1 mile</span>,
+        <span class="highlight">3 yards</span>,
+        <span class="highlight">6 feet</span>,
+        <span class="highlight">12 inches</span>.
+      </p>
+      <p>
+        Plural full names: <span class="highlight">2 kilometres</span>,
+        <span class="highlight">2 metres</span>,
+        <span class="highlight">2 centimetres</span>,
+        <span class="highlight">2 millimetres</span>.
+      </p>
+      <p>
+        Singular full names: <span class="highlight">1 kilometre</span>,
+        <span class="highlight">1 metre</span>,
+        <span class="highlight">1 centimetre</span>,
+        <span class="highlight">1 millimetre</span>.
+      </p>
+
+      <h2>Weight Units</h2>
+      <p>
+        This package weighs <span class="highlight">5kg</span>. The smaller one
+        is <span class="highlight">500g</span>.
+      </p>
+      <p>
+        I bought <span class="highlight">2 pounds</span> of apples, which is
+        about <span class="highlight">0.907 kilograms</span>.
+      </p>
+      <p>
+        The recipe calls for <span class="highlight">10 oz</span> of flour and
+        <span class="highlight">100 milligrams</span> of spice.
+      </p>
+      <p>
+        He weighs <span class="highlight">12 stone</span>. That's
+        <span class="highlight">12st</span>.
+      </p>
+      <p>
+        No space: <span class="highlight">2kg</span>,
+        <span class="highlight">500g</span>,
+        <span class="highlight">100mg</span>,
+        <span class="highlight">10lb</span>, <span class="highlight">5oz</span>,
+        <span class="highlight">10st</span>.
+      </p>
+      <p>
+        With space: <span class="highlight">2 kg</span>,
+        <span class="highlight">500 g</span>,
+        <span class="highlight">100 mg</span>,
+        <span class="highlight">10 lb</span>,
+        <span class="highlight">5 oz</span>,
+        <span class="highlight">10 st</span>.
+      </p>
+      <p>
+        Alternative spellings/abbreviations:
+        <span class="highlight">10 lbs</span>,
+        <span class="highlight">1 kilogram</span>,
+        <span class="highlight">2 kilograms</span>,
+        <span class="highlight">1 gram</span>,
+        <span class="highlight">1 pound</span>.
+      </p>
+
+      <h2>Volume Units</h2>
+      <p>
+        Please buy <span class="highlight">2L</span> of milk and a
+        <span class="highlight">500ml</span> bottle of water.
+      </p>
+      <p>
+        The car has a <span class="highlight">15 gallon</span> fuel tank. That's
+        <span class="highlight">15gal</span>.
+      </p>
+      <p>
+        I need <span class="highlight">1 quart</span> of oil and
+        <span class="highlight">2 pints</span> of cream.
+      </p>
+      <p>
+        Add <span class="highlight">8 fl oz</span> of juice. Or
+        <span class="highlight">8fluid ounces</span>.
+      </p>
+      <p>
+        No space: <span class="highlight">3L</span>,
+        <span class="highlight">250ml</span>,
+        <span class="highlight">1gal</span>, <span class="highlight">4qt</span>,
+        <span class="highlight">2pt</span>,
+        <span class="highlight">12fl oz</span>.
+      </p>
+      <p>
+        With space: <span class="highlight">3 L</span>,
+        <span class="highlight">250 ml</span>,
+        <span class="highlight">1 gal</span>,
+        <span class="highlight">4 qt</span>,
+        <span class="highlight">2 pt</span>,
+        <span class="highlight">12 fl oz</span>.
+      </p>
+      <p>
+        Full names: <span class="highlight">3 liters</span>,
+        <span class="highlight">250 milliliters</span>,
+        <span class="highlight">1 gallon</span>,
+        <span class="highlight">4 quarts</span>,
+        <span class="highlight">2 pints</span>.
+      </p>
+      <p>
+        Alternative casing: <span class="highlight">2 l</span>,
+        <span class="highlight">250 mL</span>.
+      </p>
+
+      <h2>Temperature Units</h2>
+      <p>
+        It's <span class="highlight">25°C</span> today. Yesterday it was
+        <span class="highlight">77°F</span>.
+      </p>
+      <p>
+        Water boils at <span class="highlight">100 C</span> (or
+        <span class="highlight">212 F</span>).
+      </p>
+      <p>The temperature is <span class="highlight">300K</span>.</p>
+      <p>
+        No space: <span class="highlight">20°C</span>,
+        <span class="highlight">68°F</span>, <span class="highlight">0C</span>,
+        <span class="highlight">32F</span>, <span class="highlight">273K</span>.
+      </p>
+      <p>
+        With space: <span class="highlight">20 °C</span>,
+        <span class="highlight">68 °F</span>,
+        <span class="highlight">0 C</span>, <span class="highlight">32 F</span>,
+        <span class="highlight">273 K</span>.
+      </p>
+      <p>
+        Full names: <span class="highlight">20 Celsius</span>,
+        <span class="highlight">68 Fahrenheit</span>,
+        <span class="highlight">273 Kelvin</span>.
+      </p>
+
+      <h2>Units in Lists</h2>
+      <ul>
+        <li>Item 1: <span class="highlight">10 m</span> cable</li>
+        <li>Item 2: <span class="highlight">2kg</span> of sugar</li>
+        <li>Item 3: <span class="highlight">500 ml</span> juice</li>
+        <li>Item 4: Temperature <span class="highlight">15C</span></li>
+        <li><span class="highlight">25ft</span> rope</li>
+      </ul>
+      <ol>
+        <li>First: <span class="highlight">100 miles</span> journey</li>
+        <li>Second: <span class="highlight">3 gallons</span> of paint</li>
+        <li>Third: <span class="highlight">5 lbs</span> of potatoes</li>
+        <li>Fourth: <span class="highlight">-5 °F</span> outside</li>
+      </ol>
+
+      <h2>Units in Tables</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Alternative Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Flour</td>
+            <td><span class="highlight">1 kg</span></td>
+            <td><span class="highlight">1000g</span></td>
+          </tr>
+          <tr>
+            <td>Water</td>
+            <td><span class="highlight">2 liters</span></td>
+            <td><span class="highlight">2000ml</span></td>
+          </tr>
+          <tr>
+            <td>Distance</td>
+            <td><span class="highlight">50 mi</span></td>
+            <td><span class="highlight">80.47km</span></td>
+          </tr>
+          <tr>
+            <td>Temperature</td>
+            <td><span class="highlight">30 °C</span></td>
+            <td><span class="highlight">86F</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Edge Cases and Mixed Content</h2>
+      <p>
+        A <span class="highlight">10km</span> race, not 10 kilometers of fun.
+      </p>
+      <p>The value is <span class="highlight">1,000 km</span> (with comma).</p>
+      <p>This is <span class="highlight">2.5kg</span> of material.</p>
+      <p>The measurement is <span class="highlight">~5 ft</span>.</p>
+      <p>It's <span class="highlight">5ft.</span> (with a period).</p>
+      <p>The box is <span class="highlight">10cmx20cmx5cm</span>.</p>
+      <p>
+        This is <span class="highlight">10cm</span> by
+        <span class="highlight">20cm</span>.
+      </p>
+      <p>A <span class="highlight">10-meter</span> dash.</p>
+      <p>
+        The temperature dropped by <span class="highlight">5C</span> degrees.
+      </p>
+      <p>
+        Is it <span class="highlight">10 L</span> or
+        <span class="highlight">10l</span>?
+      </p>
+      <p>
+        This text contains <span class="highlight">km</span> without a number.
+        And also <span class="highlight">miles</span>.
+      </p>
+      <p>
+        What about <span class="highlight">10KM</span> or
+        <span class="highlight">5MI</span> (uppercase)?
+      </p>
+      <p>
+        Leading/trailing spaces: " <span class="highlight">10 km</span> ", "
+        <span class="highlight">5kg</span>".
+      </p>
+      <p>
+        Units within words (should ideally not convert): This is a
+        <span class="highlight">kilometer</span>age counter. He is
+        <span class="highlight">milling</span> about. This is
+        <span class="highlight">gallon</span>try.
+      </p>
+      <p>
+        Numbers with units and other text:
+        <span class="highlight">Approx. 100 lbs</span> of weight.
+      </p>
+      <p>
+        Multiple units in one sentence: I need
+        <span class="highlight">2 m</span> of wood and
+        <span class="highlight">500 g</span> of nails, and it should be
+        <span class="highlight">10 cm</span> wide.
+      </p>
+
+      <h2>
+        Units in Code Blocks (Should probably be ignored by the extension)
+      </h2>
+      <div class="code-block">
+        let distance = "10km"; const weight = "5kg"; // Temperature: 25C
+      </div>
+
+      <p>More tests:</p>
+      <p>
+        A <span class="highlight">10 foot</span> pole. A
+        <span class="highlight">10 feet</span> measurement.
+      </p>
+      <p>
+        The area is <span class="highlight">100 sq ft</span> or
+        <span class="highlight">100 ft²</span>.
+      </p>
+      <p>
+        The volume is <span class="highlight">1000 cu ft</span> or
+        <span class="highlight">1000 ft³</span>.
+      </p>
+      <p>
+        Speed: <span class="highlight">60 mph</span> or
+        <span class="highlight">100 km/h</span>.
+      </p>
+      <p>
+        Pressure: <span class="highlight">1013 hPa</span>,
+        <span class="highlight">1 atm</span>,
+        <span class="highlight">14.7 psi</span>.
+      </p>
+      <p>
+        Energy: <span class="highlight">100 kWh</span>,
+        <span class="highlight">500 J</span>,
+        <span class="highlight">120 cal</span>,
+        <span class="highlight">500 kcal</span> (or
+        <span class="highlight">500 Calories</span>).
+      </p>
+
+      <h3>End of Test Content</h3>
+    </div>
+  </body>
+</html>

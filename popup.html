@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    
+    h1 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .toggle-label {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      transition: .4s;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .4s;
+    }
+    
+    input:checked + .slider {
+      background-color: #4CAF50;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+    
+    .button:hover {
+      background-color: #45a049;
+    }
+    
+    .button.secondary {
+      background-color: #555;
+    }
+    
+    .button.secondary:hover {
+      background-color: #444;
+    }
+    
+    /* Advanced settings styles */
+    .advanced-settings {
+      display: none;
+    }
+    
+    .settings-group {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    
+    .back-button {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #4CAF50;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .back-button svg {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Settings View -->
+  <div id="main-settings">
+    <h1>Unit Converter Settings</h1>
+    <div class="description">This extension automatically converts imperial and metric units on webpages, saving you time!.</div>
+    
+    <div class="toggle-container">
+      <span class="toggle-label">Off/On</span>
+      <label class="toggle">
+        <input type="checkbox" id="extension-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container">
+      <span class="toggle-label">Imperial/Metric</span>
+      <label class="toggle">
+        <input type="checkbox" id="conversion-direction-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="button-container">
+      <button id="advanced-settings-button" class="button secondary">Advanced Settings</button>
+      <button id="save-button" class="button">Save Changes</button>
+    </div>
+  </div>
+  
+  <!-- Advanced Settings View -->
+  <div id="advanced-settings" class="advanced-settings">
+    <div class="back-button" id="back-button">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Settings
+    </div>
+    
+    <h1>Advanced Settings</h1>
+    
+    <div class="settings-group">
+      <div class="section-title">Temperature Conversion</div>
+      <div class="toggle-container">
+        <span>Enable Temperature Conversion</span>
+        <label class="toggle">
+          <input type="checkbox" id="temperature-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div>
+        <label for="temperature-unit">Preferred Temperature Unit:</label>
+        <select id="temperature-unit">
+          <option value="celsius">Celsius (°C)</option>
+          <option value="fahrenheit">Fahrenheit (°F)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="settings-group">
+      <div class="section-title">Length/Distance Conversion</div>
+      <div class="toggle-container">
+        <span>Enable Length Conversion</span>
+        <label class="toggle">
+          <input type="checkbox" id="length-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div>
+        <label for="length-unit">Preferred Length Unit System:</label>
+        <select id="length-unit">
+          <option value="metric">Metric (m, cm, km)</option>
+          <option value="imperial">Imperial (ft, in, mi)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="settings-group">
+      <div class="section-title">Weight Conversion</div>
+      <div class="toggle-container">
+        <span>Enable Weight Conversion</span>
+        <label class="toggle">
+          <input type="checkbox" id="weight-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div>
+        <label for="weight-unit">Preferred Weight Unit System:</label>
+        <select id="weight-unit">
+          <option value="metric">Metric (kg, g)</option>
+          <option value="imperial">Imperial (lb, oz)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="settings-group">
+      <div class="section-title">Volume Conversion</div>
+      <div class="toggle-container">
+        <span>Enable Volume Conversion</span>
+        <label class="toggle">
+          <input type="checkbox" id="volume-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div>
+        <label for="volume-unit">Preferred Volume Unit System:</label>
+        <select id="volume-unit">
+          <option value="metric">Metric (l, ml)</option>
+          <option value="imperial">Imperial (gal, qt, pt, fl oz)</option>
+        </select>
+      </div>
+    </div>
+    
+    <button id="advanced-save-button" class="button">Save Changes</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

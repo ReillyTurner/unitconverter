@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Unit Converter",
+  "version": "2.0.0",
+  "description": "Automatically converts units of measurement and currencies on any webpage",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.currencyfreaks.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {}
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["conversions.csv"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {}
+}

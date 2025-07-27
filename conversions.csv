@@ -1,0 +1,26 @@
+type,fromUnit,toUnit,factor,offset,tooltip
+temperature,°F,°C,0.5556,-32,"(°F - 32) × 5/9"
+temperature,°C,°F,1.8,32,"(°C × 9/5) + 32"
+
+length,in,cm,2.54,0,"in × 2.54"
+length,cm,in,0.3937,0,"cm ÷ 2.54"
+length,ft,m,0.3048,0,"ft × 0.3048"
+length,m,ft,3.2808,0,"m ÷ 0.3048"
+length,mi,km,1.6093,0,"mi × 1.609"
+length,km,mi,0.6214,0,"km ÷ 1.609"
+length,yd,m,0.9144,0,"yd × 0.9144"
+length,m,yd,1.0936,0,"m ÷ 0.9144"
+
+weight,lb,kg,0.4536,0,"lb × 0.4536"
+weight,kg,lb,2.2046,0,"kg ÷ 0.4536"
+weight,oz,g,28.3495,0,"oz × 28.35"
+weight,g,oz,0.0353,0,"g ÷ 28.35"
+
+volume,gal,L,3.7854,0,"gal × 3.785"
+volume,L,gal,0.2642,0,"L ÷ 3.785"
+volume,qt,L,0.9464,0,"qt × 0.9464"
+volume,L,qt,1.057,0,"L ÷ 0.9464"
+volume,pt,ml,473.176,0,"pt × 473.2"
+volume,ml,pt,0.0021,0,"ml ÷ 473.2"
+volume,floz,ml,29.5735,0,"fl oz × 29.57"
+volume,ml,floz,0.0338,0,"ml ÷ 29.57"
